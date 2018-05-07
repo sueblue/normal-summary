@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>上下margin叠加问题</title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.a{
+				width: 100px;
+				height: 100px;
+				background-color:#EEEEEE;
+				border: 5px solid #bbb;
+				margin: 10px;
+			}
+			.b{
+				width: 100px;
+				height: 100px;
+				background-color:#BBBBBB;
+				border: 5px solid #999;
+				margin: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="a">
+			
+		</div>
+		<div class="b">
+			
+		</div>
+		<div>
+			当两个对象为上下关系时，而且都具备margin属性的时候，此时由margin所造成的外边距将出现叠加。
+			<br/>
+			空白边叠加时，以较大的margin值为准。一旦把某个元素设定了float属性，那么它们将不再进行空白边叠加。
+		</div>
+	</body>
+</html>
