@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>横向导航-浮动布局</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			html,
+			body {
+				height: 100%;
+			}
+			
+			.layout {
+				position: relative;
+				max-width: 550px;
+				margin: 0 auto;
+				border: 1px solid;
+				padding: 10px;
+			}
+			
+			.nav {
+				list-style: none;
+				height: 26px;
+				border-bottom: 2px solid #2788da;
+			}
+			
+			.nav li {
+				float: left;
+				font-size: 14px;
+				font-weight: bold;
+			}
+			
+			.nav li a {
+				color: #000000;
+				text-decoration: none;
+				padding-top: 4px;
+				display: block;
+				width: 97px;
+				height: 22px;
+				text-align: center;
+				background: #ececec;
+				margin-left: 2px;
+			}
+			
+			.nav li a:hover {
+				background-color: #BBBBBB;
+				color: #FFFFFF;
+			}
+			/*css选择器权重问题*/
+			
+			.nav li .current {
+				color: #FFFFFF;
+				background: #2788da;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="layout">
+			<ul class="nav">
+				<li>
+					<a class="current" href="#">文章</a>
+				</li>
+				<li>
+					<a href="#">参考</a>
+				</li>
+				<li>
+					<a href="#">Blog</a>
+				</li>
+				<li>
+					<a href="#">论坛</a>
+				</li>
+				<li>
+					<a href="#">联系</a>
+				</li>
+			</ul>
+	</body>
+
+</html>
