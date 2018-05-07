@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>使用css缩写</title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			
+		</style>
+	</head>
+	<body>
+		https://developer.mozilla.org/zh-CN/docs/Web/CSS/Shorthand_properties
+		
+		css缩写 能缩减大量的代码，使代码便于阅读、理解。
+		1.background
+		  background:#F00 url(header_bg.gif) no-repeat fixed left top;
+		 
+		  background-color | background-image | background-repeat | background-attachment | background-position
+
+		2.font
+		  font:normal small-caps bold 14px/1.5em '宋体',arial,verdana;
+		
+      font-style | font-variant | font-weight | font-size | line-height | font-family
+		 注：简写时，font-size和line-height只能通过斜杠/组成一个值，不能分开写。
+		
+		3.外边距和内边距：margin padding
+		 margin:5px;(上/右/下/左)
+		 margin-top | margin-right | margin-bottom | margin-left
+		 
+		 margin:4px 0 1.5em -12px;(上 | 右 | 下 | 左)  
+		 margin-top | margin-right | margin-bottom | margin-left
+		 
+		 margin: 0 6px;	(上/下 | 左/右)	 
+         (margin-top/margin-bottom) | (margin-left/margin-right)
+         
+     margin: 151px auto 0; (上 | 左/右 | 下)
+     margin-top | (margin-left/margin-right) | margin-bottom
+         
+               注：padding属于的简写和margin完全一样。
+                 ps:关于四个边的特别说明
+                 不论是边框宽度，还是边框颜色、边距等,处理和盒子（box）边界（edge）相关的属性时，
+                 比如 border-style、margin 或者 padding， 始终使用一致的1个到4个值的语法表示这些边界。
+        
+                 
+    4.border       
+      border:1px solid #CCC;
+        
+      border-width | border-style | border-color
+        
+    5.list-style
+      list-style:square outside url(bullet.gif);
+      
+      list-style-type | list-style-position | list-style-image
+               
+	</body>
+</html>
