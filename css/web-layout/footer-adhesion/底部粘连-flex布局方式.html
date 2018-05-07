@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>flex布局</title>
+    <meta charset="utf-8" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100%;
+            /*flex布局*/
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: yellow;
+            width: 100%;
+            height: 100px;
+        }
+
+        .container {
+           flex: 1;
+        }
+
+        .inner-content {
+            background-color: green;
+            height: 500px;
+        }
+
+        footer {
+            height: 100px;
+            background: #444547;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> header</h1>
+    </header>
+
+    <section class="container">
+        <div class="inner-content">
+            <h1>
+                设置 flex: 1 在你希望自动填充窗口空间的子元素上（在我们的例子里是 .content 元素）。
+                或者，可以设置 margin-top:auto 来让子元素尽可能远离它前面的元素
+                （或者根据需要选择任意一个方向的 margin）。
+                （上面的 flex:1 也可以用 margin-bottom:auto，内容垂直居中可以用margin:auto 0，flex 布局很奇妙吧——译者注）
+            </h1>
+        </div>
+    </section>
+
+    <footer>
+        <h1>footer</h1>
+    </footer>
+</body>
+</html>
