@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			html,body{
+				height: 100%;
+			}
+			.left{
+				background: #ccc;
+				border: 1px solid #333333;
+				width: 200px;
+                height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="left">
+			高度自适应
+			(同时设置了html与body的height:100%;这就是高度自适应问题的关键所在。
+			一个对象的高度是否可以使用百分比显示，取决于对象的父级对象。
+			why?设置html的高度为100%，因为IE与Firefox对页面对象的解析方式存在一定差异，浏览器兼容。)
+		</div>
+	</body>
+</html>
