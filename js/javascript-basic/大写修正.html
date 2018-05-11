@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>大写修正</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<p>
+			在这个练习中，我们有英国城市的名字，但是这个大写字母都搞砸了。  </br>
+			我们希望你改变它们，使它们都是小写字母，除了首字母。
+			 一个很好的方法是： </br>
+			 将输入变量中包含的整个字符串转换为小写，并将其存储在新变量中。 </br>
+			 在此新变量中获取字符串的第一个字母并将其存储在另一个变量中。 </br>
+			 将此最新变量用作子字符串，将小写字符串的第一个字母从小写更改为大写。 </br>
+			 将此替换过程的结果存储在另一个新变量中。  </br>
+			 让结果变量的值与最终结果相等，而不是使用输入变量。
+		</p>
+		<div class="output" style="min-height: 125px;">
+
+			<ul>
+				<!--<li>lonDon</li>
+				<li>ManCHESTer</li>
+				<li>BiRmiNGHAM</li>
+				<li>liVERpoOL</li>-->
+			</ul>
+
+		</div>
+		<script>
+			var list = document.querySelector('.output ul');
+			list.innerHTML = '';
+			var cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
+			for(var i = 0; i < cities.length; i++) {
+				var input = cities[i].toLowerCase();
+				// write your code just below here
+                var firstCase=input[0].toUpperCase();
+                input=firstCase+input.slice(1);
+				var result = input;
+				var listItem = document.createElement('li');
+				listItem.textContent = result;
+				list.appendChild(listItem);
+			}
+		</script>
+	</body>
+
+</html>

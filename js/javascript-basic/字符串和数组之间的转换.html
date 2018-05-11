@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>字符串和数组之间的转换</title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			
+		</style>
+	</head>
+	<body>
+		通常，您会看到一个包含在一个长长的字符串中的原始数据，</br>
+		您可能希望将有用的项目分成更有用的表单，然后对它们进行处理，</br>
+		例如将它们显示在数据表中。 为此，我们可以使用split()方法。 </br>
+		在其最简单的形式中，这需要一个参数，您要将字符串分隔的字符，</br>
+		并返回分隔符之间的子串，作为数组中的项</br>
+		
+		Note: 好的，这在技术上是一个字符串方法，而不是一个数组方法，但是我们把它放在数组中，因为它在这里很好。
+		<script>
+			var myData = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
+			var myArray = myData.split(',');
+            
+            //可以使用join()方法进行相反的操作。 尝试以下：
+            var myNewString = myArray.join(',');
+            
+            //将数组转换为字符串的另一种方法是使用toString()方法。 toString（）可以比join（）更简单，因为它不需要一个参数，但更有限制。
+            //使用join（）可以指定不同的分隔符
+            
+            var dogNames = ["Rocket","Flash","Bella","Slugger"];
+            dogNames.toString(); //Rocket,Flash,Bella,Slugger
+		</script>
+	</body>
+</html>
