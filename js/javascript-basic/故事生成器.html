@@ -55,37 +55,45 @@
 			var customname = document.getElementById('customname');
 			var randomize = document.getElementsByClassName('randomize')[0];
 			var story = document.getElementsByClassName('story')[0];
-			var uk=document.getElementById('uk');
-			
-            var storyText = 'It was 94 farenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
-            var insertX = ['Willy the Goblin','Big Daddy','Father Christmas'];
-            var insertY = ['the soup kitchen','Disneyland','the White House'];
-            var insertZ = ['spontaneously combusted','melted into a puddle on the sidewalk','turned into a slug and crawled away'];
-            function getRandomInt(min, max) {
-              min = Math.ceil(min);
-              max = Math.floor(max);
-              return Math.floor(Math.random() * (max - min)) + min;
-            }
+			var uk = document.getElementById('uk');
+
+			var storyText = 'It was 94 farenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.';
+			var insertX = ['Willy the Goblin', 'Big Daddy', 'Father Christmas'];
+			var insertY = ['the soup kitchen', 'Disneyland', 'the White House'];
+			var insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewalk', 'turned into a slug and crawled away'];
+
+			function getRandomInt(min, max) {
+				min = Math.ceil(min);
+				max = Math.floor(max);
+				return Math.floor(Math.random() * (max - min)) + min;
+			}
+
 			function randomValueFromArray(insertWord) {
-			   var min=0;
-			   var max=insertWord.length-1;
-               return insertWord[getRandomInt(min,max)];
+				var min = 0;
+				var max = insertWord.length - 1;
+				return insertWord[getRandomInt(min, max)];
 			}
-			randomize.onclick=function(){
-				var newStory=storyText;
-				var xItem=randomValueFromArray(insertX),yItem=randomValueFromArray(insertY),zItem=randomValueFromArray(insertZ);
-				newStory.replace(':insertx:',xItem);
-				newStory.replace(':inserty:',yItem);
-				newStory.replace(':insertz:',zItem);
-				if(customname.value!=''){
-					newStory.replace('Bob',customname.value)
+			randomize.onclick = function() {
+				var newStory = storyText;
+				var xItem = randomValueFromArray(insertX),
+					yItem = randomValueFromArray(insertY),
+					zItem = randomValueFromArray(insertZ);
+				newStory = newStory.replace(':insertx:', xItem);
+				newStory = newStory.replace(':insertx:', xItem);
+				newStory = newStory.replace(':inserty:', yItem);
+				newStory = newStory.replace(':insertz:', zItem);
+				if(customname.value != '') {
+					newStory = newStory.replace('Bob', customname.value)
 				}
-				if(uk.checked){
-					
+				if(uk.checked) {
+					var weight = Math.round(300 * 0.0714286) + ' stone';
+					var temperature = Math.round((94 - 32) * 5 / 9) + ' centigrade';
+					newStory = newStory.replace('94 farenheit', temperature);
+					newStory = newStory.replace('300 pounds', weight);
 				}
-				story.innerHTML=newStory;
+				story.innerHTML = newStory;
+				story.style.visibility = 'visible';
 			}
-			
 		</script>
 	</body>
 
