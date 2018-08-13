@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.flex-container {
+  display: flex;
+  width:640px;
+  flex-wrap:wrap;
+  align-items: stretch;
+  background-color: #f1f1f1;
+}
+
+.flex-container > div {
+  background-color: DodgerBlue;
+  color: white;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  flex-shrink:0;
+  flex-grow:1;
+}
+.flex-container > div:first-child {
+   margin-left: 0;
+} 
+.flex-container > div:nth-child(5n+1){
+   margin-left: 0;
+}
+.flex-container > div:nth-child(5n){
+   margin-right: 0;  
+}
+
+</style>
+</head>
+<body>
+<h1>The flex-grow Property</h1>
+
+<p>Make the third flex item grow eight times faster than the other flex items:</p>
+
+<div class="flex-container">
+  <div >1</div>
+  <div >2</div>
+  <div >3</div>
+  <div >4</div>
+  <div >5</div>
+  <div >6</div>
+  <div >7</div>
+  <div >8</div>
+  <div >9</div>
+  <div >10</div>
+  <div >11</div>
+  <div style="background:transparent">12</div>
+  <div style="background:transparent">13</div>
+  <div style="background:transparent">14</div>
+  <div style="background:transparent">15</div>
+</div>
+
+</body>
+</html>
