@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        *{
+            padding:0;
+            margin:0;
+        }
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            height: 80px;
+            width: 100%;
+            background:pink;
+        }
+
+        .container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav {
+            width: 200px;
+            float: left;
+            border: 1px solid green;
+        }
+
+        section {
+            margin-left: 200px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>ym</li>
+                <li>ym</li>
+                <li>ym</li>
+                <li>ym</li>
+                <li>ym</li>
+            </ul>
+        </nav>
+        <section>
+            这个例子和之前那个外观一模一样。请注意我们在容器上做了“清除浮动”。原本在这个例子中是不需要的，但是当 nav 比非浮动的内容还要高时就需要了。
+        </section>
+        <section>
+            1
+        </section>
+        <section>
+            1
+        </section>
+    </div>
+    <footer>
+        footer
+    </footer>
+</body>
+</html>

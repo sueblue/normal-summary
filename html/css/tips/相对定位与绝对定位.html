@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>相对定位与绝对定位</title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}	
+			.divGroup{
+              position: relative;
+              margin: 50px 0 0 50px;
+              border: 1px solid #000;
+              width: 400px;
+              height: 300px;
+			}
+			.a,.b,.c,.d{
+             background: #eee;
+             border: 2px solid #aaa;
+             width: 100px;
+             height: 100px;
+             margin: 2px 2px 2px 0;
+             float: left;
+			}	
+		    .b{
+		    	position: absolute;
+		    	left: 10px;
+		    	top:30px;
+		    }	
+		</style>
+	</head>
+	<body>
+		<div class="divGroup">
+			<div class="a">a</div>
+			<div class="b">b</div>
+			<div class="c">c</div>
+			<div class="d">d</div>
+		</div>
+		<p>绝对定位布局脱离文档流，一般处于相对定位布局之中，以防影响其他css布局。
+                   注意一下浮动布局的顺序：左浮动：Ａ：左，Ｂ：左，则Ａ，Ｂ ；右浮动：Ｃ：右，Ｄ：右，则Ｄ，Ｃ。
+		</p>
+	</body>
+</html>

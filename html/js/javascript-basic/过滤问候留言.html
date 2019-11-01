@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>过滤问候留言</title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<p>
+			在第一个练习中，我们将简单介绍一下 - 我们有一系列的问候卡片消息，但我们希望对它们进行排序，以列出圣诞消息。
+			  </br>
+			 我们希望您在if（...）结构中填写条件测试，以测试每个字符串，并将其打印在列表中，如果它是圣诞消息。
+             </br>
+                     首先考虑一下如何测试每种情况下的消息是否为圣诞消息。 所有这些消息中都有什么字符串，您可以使用什么方法来测试是否存在？
+             </br>
+                     然后，您需要编写操作数1操作2形式的条件测试。 左边的东西等于右边的东西吗？ 或者在这种情况下，方法调用在左边返回的结果在右边？
+             </br>
+                     提示：在这种情况下，测试方法调用是否不等于某个结果可能更有用。                       
+		</p>
+		<p>
+			<div class="output">						
+			<ul>
+				<!--<li>Happy Birthday!</li>
+				<li>Merry Christmas my love</li>
+				<li>A happy Christmas to all the family</li>
+				<li>You're all I want for Christmas</li>
+				<li>Get well soon</li>-->
+			</ul>
+			</div>
+		</p>
+		<script>
+			var list=document.querySelector('.output ul');
+			list.innerHTML='';
+			var greetings=['Happy Birthday!','Merry Christmas my love','A happy Christmas to all the family'
+			,'You\'re all I want for Christmas','Get well soon'];
+			for(var  i=0;i<greetings.length;i++){
+
+				if(greetings[i].indexOf('Christmas')!==-1){
+					var result=greetings[i];
+					var listItem=document.createElement('li');
+					listItem.textContent=result;
+					list.appendChild(listItem);
+				}
+			}
+		</script>
+	</body>
+</html>

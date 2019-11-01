@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>左右position布局-footer固定</title>
+    <meta charset="utf-8" />
+    <style>
+        * {
+            padding:0;
+            margin:0;
+        }
+        .container {
+            position: relative;
+        }
+
+        nav {
+            width: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            border: 1px solid yellow;
+        }
+
+        section {
+            margin-left: 200px;
+            border: 1px solid green;
+        }
+
+        footer {
+            height: 70px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li>c#</li>
+                <li>c#</li>
+                <li>c#</li>
+                <li>c#</li>
+            </ul>
+        </nav>
+        <section>
+            section 的 margin-left 样式确保了有足够的空间容纳 nav 元素。
+        </section>
+        <section>
+            注意观察当你调整浏览器窗口时发生了什么。效果很赞！
+        </section>
+        <section>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+        </section>
+    </div>
+    <footer>
+        如果你使用了一个固定定位的页眉或页脚，确保有足够的空间来显示它们！我在 body 上面加了 margin-bottom 。
+    </footer>
+</body>
+</html>

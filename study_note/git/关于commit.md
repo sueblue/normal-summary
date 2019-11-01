@@ -21,4 +21,10 @@
 
 6. 提取commit到另一分支    
    + 首先checkout到此分支，然后cherry-pick xxx 即可
+   + cherry多个commit??? 
+   
+       git cherry-pick commitid1..commitid100
+    
+       pick集合关系 -- (commitid1..commitid100]
+
   

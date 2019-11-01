@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>下拉及多级弹出菜单-下拉菜单使用绝对定位布局</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			
+			html,
+			body {
+				height: 100%;
+			}
+			
+			ul {
+				list-style: none;
+			}
+			
+			.layout {
+				position: relative;
+				max-width: 550px;
+				margin: 0 auto;
+				border: 1px solid;
+				padding: 10px;
+			}
+			
+			.nav {
+				height: 26px;
+				border-bottom: 2px solid #2788da;
+			}
+			
+			.nav-tiem {
+				float: left;
+				font-size: 14px;
+				font-weight: bold;
+				position: relative;
+			}
+			
+			.nav-tiem:after {
+				content: '';
+				display: table;
+				clear: both;
+			}
+			/*.nav-tiem:hover ul {
+				display: block;
+			}*/
+			
+			.nav a {
+				color: #000000;
+				text-decoration: none;
+				padding-top: 4px;
+				display: block;
+				width: 97px;
+				height: 22px;
+				text-align: center;
+				background: #ececec;
+				margin-left: 2px;
+			}
+			
+			.nav li a:hover {
+				background-color: #BBBBBB;
+				color: #FFFFFF;
+			}
+			/*css选择器权重问题*/
+			
+			.nav li .current {
+				color: #FFFFFF;
+				background: #2788da;
+			}
+			
+			.nav li ul {
+				display: none;
+				position: absolute;
+				top: 29px;
+				left: 0;
+			}
+			
+			.over {
+				display: block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="layout" id="nav">
+			<ul class="nav">
+				<li class="nav-tiem">
+					<a class="current" href="#">文章</a>
+					<ul>
+						<li>
+							<a href="#">css教程</a>
+						</li>
+						<li>
+							<a href="#">dom教程</a>
+						</li>
+						<li>
+							<a href="#">xml教程</a>
+						</li>
+						<li>
+							<a href="#">flash教程</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-tiem">
+					<a href="#">参考</a>
+					<ul>
+						<li>
+							<a href="#">css</a>
+						</li>
+						<li>
+							<a href="#">dom</a>
+						</li>
+						<li>
+							<a href="#">xml</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-tiem">
+					<a href="#">Blog</a>
+					<ul>
+						<li>
+							<a href="#">全部</a>
+						</li>
+						<li>
+							<a href="#">网页技术</a>
+						</li>
+						<li>
+							<a href="#">UI技术</a>
+						</li>
+						<li>
+							<a href="#">flash技术</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-tiem">
+					<a href="#">论坛</a>
+					<ul>
+						<li>
+							<a href="#">摇滚</a>
+						</li>
+						<li>
+							<a href="#">纯音乐</a>
+						</li>
+						<li>
+							<a href="#">古典金曲</a>
+						</li>
+						<li>
+							<a href="#">电影原声</a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-tiem">
+					<a href="#">联系</a>
+				</li>
+			</ul>
+	</body>
+
+</html>

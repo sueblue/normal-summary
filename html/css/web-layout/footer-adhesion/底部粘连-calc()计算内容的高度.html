@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>calc()计算内容的高度</title>
+    <meta charset="utf-8" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            height: 100%;
+        }
+
+        header {
+            background: yellow;
+            width: 100%;
+            height: 100px;
+        }
+
+        .container {
+            min-height: calc(100vh - 200px);
+        }
+
+        .inner-content {
+            background-color: green;
+            height: 500px;
+        }
+
+        footer {
+            height: 100px;
+            background: #444547;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> header</h1>
+    </header>
+
+    <section class="container">
+        <div class="inner-content">
+            <h1>
+                注意我这里用 calc( ) 扣除了200px(header+footer高度)，
+                把 footer 固定为 100px。
+                这是假设内容中的最后一个元素有一个 20px 的 margin-bottom。
+                这个 margin-bottom 和 footer 的高度要加在一起从 viewport 高度中扣除。
+                而且，我们在这里还用了 viewport 单位（vh——译者注），这是另外一个小技巧，
+                因为如果用 100% 作为 wrapper 的高度，那我们还得先把 body 的高度设为 100%。
+            </h1>
+        </div>
+    </section>
+
+    <footer>
+        <h1>footer</h1>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            margin: 1rem;
+            border: 1px solid red;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            inline-block 布局注意事项：
+            vertical-align 属性会影响到 inline-block 元素，你可能会把它的值设置为 top 。
+            你需要设置每一列的宽度
+            如果HTML源代码中元素之间有空格，那么列与列之间会产生空隙
+        </div>
+        <div class="box">
+            2
+        </div>
+        <div class="box">
+            3
+        </div>
+        <div class="box">
+            4
+        </div>
+        <div class="box">
+            5
+        </div>
+        <div class="box">
+            6
+        </div>
+        <div class="box">
+            7
+        </div>
+        <div class="box">
+            8
+        </div>
+
+    </div>
+</body>
+</html>
