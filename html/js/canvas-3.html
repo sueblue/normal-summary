@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        canvas {
+            border: 1px solid black;
+            margin: 0 auto;
+            display: block;
+        }
+
+        img {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <canvas id="canv" width=" 200" height="200">A drawing of something.
+    </canvas>
+    <img src='https://cdn.glitch.com/4c9ebeb9-8b9a-4adc-ad0a-238d9ae00bb5%2Fmdn_logo-only_color.svg?1535749917189' width=100 height=100>
+    <script>
+        var canvas = document.getElementById("canv");
+        var ctx = canvas.getContext("2d");
+        var iakImg = document.images[0];
+        var img = new Image();
+        img.crossOrigin = "Anonymous";
+        img.src=iakImg.src;
+        img.addEventListener('load', function () {
+         //If you try to call drawImage() before the image has finished loading, it won't do anything (or, in older browsers, may even throw an exception). 
+        //So you need to be sure to use the load event so you don't try this before the image has loaded:
+        ctx.drawImage(img, 50, 50, 100, 100);
+            //取得图像数据
+            var imageData = ctx.getImageData(0, 0, img.width, img.height);
+            var data = imageData.data
+            // console.log(data);
+            var red, green, blue, alpha, len, average;
+            for (i = 0, len = data.length; i < len; i += 4) {
+                red = data[i];
+                green = data[i + 1];
+                blue = data[i + 2];
+                alpha = data[i + 3];
+                //求得 rgb 平均值
+                average = Math.floor((red + green + blue) / 3);
+                //设置颜色值，透明度不变
+                data[i] = average;
+                data[i + 1] = average;
+                data[i + 2] = average;
+            }
+            //回写图像数据并显示结果
+            imageData.data = data;
+            ctx.putImageData(imageData, 0, 0);
+        }, false);
+    </script>
+</body>
+
+</html>
