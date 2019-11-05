@@ -22,4 +22,6 @@
     ctx.fillRect(30, 30, 50, 50); 
 ```
 
-### 3. 
+### 3. getImageData时常会遇到cross-origin 问题
+mdn有相关资料--[方案](https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image)
+
