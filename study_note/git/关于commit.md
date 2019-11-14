@@ -26,5 +26,8 @@
        git cherry-pick commitid1..commitid100
     
        pick集合关系 -- (commitid1..commitid100]
-
+       
+7. 关于merge
+   + 合并时遇到冲突想取消操作，恢复index，用git merge --abort
+  
   
