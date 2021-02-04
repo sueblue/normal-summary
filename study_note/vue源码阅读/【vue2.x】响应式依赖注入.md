@@ -131,3 +131,5 @@ export default {
 2. 组件是否紧密耦合？
 3. 使用vuex是否开销太过？
 4. 只在少许组件中包含data？
+
+原文地址：https://blog.logrocket.com/how-to-make-provide-inject-reactive/
