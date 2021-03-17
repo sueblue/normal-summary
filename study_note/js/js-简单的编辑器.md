@@ -5,7 +5,7 @@
 
 ### 二、简单的编辑器涉及到复制、粘贴的问题
 
-复制、粘贴的东西来自于剪切板(Clipboard)[https://w3c.github.io/clipboard-apis/]。
+复制、粘贴的东西来自于剪切板[Clipboard](https://w3c.github.io/clipboard-apis/)。
 
 [Clipboard API](https://developer.mozilla.org/zh-CN/docs/Web/API/Clipboard_API)提供了响应剪贴板命令（剪切、复制和粘贴）与异步读写系统剪贴板的能力。从权限 Permissions API 获取权限之后，才能访问剪贴板内容；如果用户没有授予权限，则不允许读取或更改剪贴板内容。
 
@@ -342,7 +342,7 @@ function getPosition(ctrl) {
 
 首先，先了解一下contenteditable="true"的div。可编辑的div，再结合它的表现来看，就是在div里添加的dom节点，文本就是text节点，想插入图片也是一个图片dom节点进行插入。
 
-主要的思路-(把获取光标位置转化为获取一个元素的位置就好)[https://www.cnblogs.com/idche/archive/2010/10/30/1865085.html]
+主要的思路-[把获取光标位置转化为获取一个元素的位置就好](https://www.cnblogs.com/idche/archive/2010/10/30/1865085.html)
 
 1.利用keydown事件进行监听
 2.监听到特殊字符，手动插入一个span元素
